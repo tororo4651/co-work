@@ -1,0 +1,45 @@
+// ベース
+@use "bases/_bases.scss";
+
+
+// レイアウト
+@use "layouts/_layouts.scss";
+
+
+// コンポーネント・パーツ
+// 見出し
+@use "components/parts/headings";
+// ボタン
+@use "components/parts/btns";
+
+
+// コンポーネント・共通
+// ヘッダー
+@use "components/common/header";
+// グローバルナビゲーション
+@use "components/common/_gnav.scss";
+// フッター
+@use "components/common/footer";
+
+
+// コンポーネント・その他
+// メインコンテンツ
+@use "components/other/mains/top-main";
+// ヒーローイメージ
+@use "components/other/heroes/_top-hero.scss";
+// セクション・イントロダクション
+@use "components/other/sections/intro-section";
+// セクション・サービス
+@use "components/other/sections/service-section";
+// セクション・プラン
+@use "components/other/sections/_plan-section.scss";
+// セクション・アクセス
+@use "components/other/sections/access-section";
+// セクション・お問合せ
+@use "components/other/sections/_contact-section.scss";
+// カード・プラン
+@use "components/other/cards/plan-card";
+
+
+// ユーティリティクラス・Utilityクラス・汎用クラス
+@use "utilities/_utilities.scss";

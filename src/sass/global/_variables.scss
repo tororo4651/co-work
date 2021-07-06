@@ -1,0 +1,27 @@
+// 変数
+
+
+// カラー
+$mainColor: #D39E27;
+$lightMainColor: #FCF7ED;
+$accentColor: #5AB43F;
+$textColor: #333333;
+$grayColor: #505050;
+$lightGrayColor: #707070;
+
+
+// ブレイクポイント
+$breakpoints: (
+  xs-min: '(min-width: 375px)',
+  xs-max: '(max-width: 374px)',
+  sm-min: '(min-width: 500px)',
+  sm-max: '(max-width: 499px)',
+  md-min: '(min-width: 768px)',
+  md-max: '(max-width: 767px)',
+  lg-min: '(min-width: 950px)',
+  lg-max: '(max-width: 949px)',
+  xl-min: '(min-width: 1200px)',
+  xl-max: '(max-width: 1199px)',
+  xxl-min: '(min-width: 1366px)',
+  xxl-max: '(max-width: 1365px)'
+);

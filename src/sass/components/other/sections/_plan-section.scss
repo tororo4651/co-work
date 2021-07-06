@@ -1,0 +1,51 @@
+// セクション・プラン
+
+
+@use "../../../global/" as g;
+
+
+.planSection {
+  padding: 40px 0;
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+
+  @include g.mq(sm-min) {
+    &__heading {
+      margin-bottom: 50px;
+    }
+
+    &__cards {
+      margin-bottom: -20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__card {
+      width: 49%;
+    }
+  }
+
+  @include g.mq(md-min) {
+    &__btn {
+      margin-top: 50px;
+    }
+  }
+
+  @include g.mq(lg-min) {
+    &__card {
+      width: 23.5%;
+    }
+  }
+}

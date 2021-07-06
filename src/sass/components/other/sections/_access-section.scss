@@ -1,0 +1,22 @@
+// セクション・アクセス
+
+
+.accessSection {
+  padding: 40px 0;
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__mapWrapper {
+    margin: 0 calc(50% - 50vw) 40px;
+  }
+
+  &__map {
+    width: 100%;
+  }
+}

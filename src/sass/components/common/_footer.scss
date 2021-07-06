@@ -1,0 +1,187 @@
+// フッター
+
+
+// 変数・ミックスイン・関数
+@use "../../global/" as g;
+
+
+.footer {
+  position: relative;
+  background-color: g.$grayColor;
+  color: #fff;
+
+  &__site {
+    padding: 30px 0 40px;
+
+    &Logo {
+      width: 250px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address {
+    margin-bottom: 30px;
+    font-style: normal;
+  }
+
+  &__sns {
+    display: flex;
+
+    &Item {
+      margin-right: 15px;
+    }
+  }
+
+  &__navList01 {
+    margin: 0 calc(50% - 50vw) 25px;
+  }
+
+  &__navItem01 {
+    border-top: solid 1px g.$lightGrayColor;
+
+    &:last-child {
+      border-bottom: solid 1px g.$lightGrayColor;
+    }
+  }
+
+  &__navLink01 {
+    position: relative;
+    display: block;
+    padding: 15px 20px;
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      width: 0.5em;
+      height: 0.5em;
+      border-top: solid 2px;
+      border-right: solid 2px;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      background-color: g.$lightGrayColor;
+    }
+  }
+
+  &__navList02 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  &__navItem02 {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__navLink02 {
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+  }
+
+  &__copyright {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #000;
+  }
+
+  &__pageTop {
+    position: absolute;
+    top: -61px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    background-color: g.$grayColor;
+    color: red;
+    transition: background-color 0.3s;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -25%) rotate(-45deg);
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-top: solid 2px #fff;
+      border-right: solid 2px #fff;
+    }
+
+    &:hover {
+      background-color: g.$lightGrayColor;
+    }
+  }
+
+
+  @include g.mq(md-min) {
+    &__inner {
+      display: flex;
+    }
+
+    &__site {
+      width: 50%;
+    }
+
+    &__navList01 {
+      width: 25%;
+      margin: 50px 0;
+    }
+
+    &__navItem01 {
+      border-top: none;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      & + & {
+        margin-top: 20px;
+      }
+    }
+
+    &__navLink01 {
+      display: inline;
+      padding: 0;
+
+      &::after {
+        content: normal;
+      }
+
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    &__navList02 {
+      width: 25%;
+      display: block;
+      margin: 50px 0;
+    }
+
+    &__navItem02 {
+      width: auto;
+      margin: 0;
+
+      & + & {
+        margin-top: 20px;
+      }
+    }
+
+    &__navLink02 {
+      font-size: 16px;
+    }
+  }
+}

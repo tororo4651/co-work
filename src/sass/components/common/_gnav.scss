@@ -1,0 +1,160 @@
+// グローバルナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.gNavBtn {
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none;
+
+  &__bar {
+    position: relative;
+    display: block;
+    height: 2px;
+    background-color: g.$textColor;
+    transition: background-color 0.3s;
+
+    // グローバルナビゲーション 開く。
+    .is-gNavOpen & {
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: g.$textColor;
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+
+      .is-gNavOpen & {
+        transform: translateY(0) rotate(45deg);
+      }
+    }
+
+    &::after {
+      transform: translateY(10px);
+
+      .is-gNavOpen & {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+}
+@include g.mq(md-max) {
+  // 開閉ボタン
+
+  // メニュー
+  .gNav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transform: translateY(-120%);
+    width: 100vw;
+    height: calc(100% - 60px);
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.3s;
+
+    .is-gNavOpen & {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &__list {
+      border-top: solid 1px #ccc;
+    }
+
+    &__item {
+      border-bottom: solid 1px #ccc;
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      padding: 15px 20px;
+      font-weight: 700;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+        content: "";
+        width: 0.5em;
+        height: 0.5em;
+        border-top: solid 2px g.$mainColor;
+        border-right: solid 2px g.$mainColor;
+        transform: rotate(45deg);
+      }
+    }
+
+    &__en {
+      margin-left: 1em;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+    }
+  }
+
+
+  html.is-gNavOpen,
+  .is-gNavOpen body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+
+@include g.mq(md-min) {
+  .gNavBtn {
+    display: none;
+  }
+
+  .gNav {
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin: 0 1em;
+
+      @include g.mq(lg-min) {
+        margin: 0 2em;
+      }
+    }
+
+    &__link {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: color 0.3s;
+
+      &:hover {
+        color: g.$mainColor;
+      }
+    }
+
+    &__en {
+      display: block;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+    }
+  }
+}

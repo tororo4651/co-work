@@ -1,0 +1,40 @@
+@use "_reset.scss";
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.75;
+  color: g.$textColor;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}

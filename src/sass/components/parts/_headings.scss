@@ -1,0 +1,44 @@
+// パーツ・見出し
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// プライマリ
+.primaryHeading {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin: 0 15px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
+
+  &__en {
+    display: block;
+    font-size: 12px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    border-top: solid 1px g.$mainColor;
+    flex: 1;
+    transform: translateY(-10px);
+  }
+
+
+  @include g.mq(md-min) {
+    &__text {
+      font-size: 36px;
+    }
+
+    &__en {
+      font-size: 16px;
+    }
+  }
+}

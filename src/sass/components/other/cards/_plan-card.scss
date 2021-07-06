@@ -1,0 +1,75 @@
+// カード・プラン
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.planCard {
+  border: solid 1px g.$mainColor;
+  border-radius: 4px;
+  padding: 15px;
+
+  &__heading {
+    min-height: 77px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    text-align: center;
+    background-color: g.$lightMainColor;
+    font-size: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  &__desc {
+    width: calc(100% - 5em);
+  }
+
+
+  // アイコン
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  // マスタープラン
+  &--master {
+    &::before {
+      background-image: url(/images/top/ico_plan_master.svg);
+    }
+  }
+
+  // デイタイムプラン
+  &--day {
+    &::before {
+      background-image: url(/images/top/ico_plan_day.svg);
+    }
+  }
+
+  // ナイトタイムプラン
+  &--night {
+    &::before {
+      background-image: url(/images/top/ico_plan_night.svg);
+    }
+  }
+
+  // ドロップインプラン
+  &--dropin {
+    &::before {
+      background-image: url(/images/top/ico_plan_dropin.svg);
+    }
+  }
+}

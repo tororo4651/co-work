@@ -1,0 +1,40 @@
+// ヘッダー
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+
+  &__inner {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading {
+    line-height: 1;
+  }
+
+  &__logo {
+    width: 185px;
+  }
+
+
+  @include g.mq('md-min') {
+    &__inner {
+      height: 100px;
+    }
+
+    &__logo {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('components/common/_head.ejs', top) %>
+
+<body class="top">
+
+<%- include('components/common/_header') %>
+
+
+<main class="topMain">
+  <%- include('components/other/_top-hero.ejs') %>
+
+  <div class="l-container">
+
+    <section class="topMain__intro introSection">
+      <h2 class="introSection__heading">2020年8月OPEN</h2>
+
+      <p class="introSection__text">
+        東京メトロ「神保町駅」から徒歩3分の駅チカに、<br class="pcOnly">
+        コワーキングスペース「Co-Work MdN」が誕生しました。<br>
+        24時間利用可のマスタープラン・平日デイタイムプラン・ナイト＆週末プランなど豊富な月極プランの他、<br class="pcOnly">
+        会員登録なしで気軽に立ち寄れるドロップインも可能。<br>
+        お気軽にお立ち寄り・お問い合わせください！
+      </p>
+
+      <figure class="introSection__figure">
+        <img class="introSection__image"
+          srcset="/images/top/ph_image01.jpg 375w,
+                  /images/top/ph_image01-750.jpg 750w,
+                  /images/top/ph_image01-1125.jpg 1125w"
+
+          sizes="(max-width: 767px) 50vw,
+                 (max-width: 1040px) calc((100vw - 40px) / 4),
+                 (min-width: 1041px) 250px"
+
+          src="/images/top/ph_image01.jpg"
+          alt="写真：ノートパソコン">
+
+        <img class="introSection__image" src="/images/top/ph_image02.jpg" alt="写真：インテリア">
+
+        <img class="introSection__image" src="/images/top/ph_image03.jpg" alt="写真：ドア">
+
+        <img class="introSection__image" src="/images/top/ph_image04.jpg" alt="写真：椅子">
+      </figure>
+    </section>
+
+    <section class="serviceSection">
+      <header class="serviceSection__heading primaryHeading">
+        <h2 class="primaryHeading__text">
+          サービス
+          <span class="primaryHeading__en" lang="en">Service</span>
+        </h2>
+      </header><!-- /.primaryHeading -->
+
+      <ul class="serviceSection__list">
+        <li class="serviceSection__item">神保町駅徒歩3分</li>
+        <li class="serviceSection__item">高速WiFi完備</li>
+        <li class="serviceSection__item">全席電源完備</li>
+        <li class="serviceSection__item">モニタ・マウス等備品貸出有</li>
+        <li class="serviceSection__item">防音電話ブース・会議室有<small class="serviceSection__itemSm">（※予約制）</small></li>
+        <li class="serviceSection__item">24時間利用可<small class="serviceSection__itemSm">（※マスタープランのみ）</small></li>
+        <li class="serviceSection__item">本格ドリンクバー完備</li>
+        <li class="serviceSection__item">飲食物持ち込みOK</li>
+      </ul>
+
+      <a class="serviceSection__btn primaryBtn" href="#">サービス詳細はこちら</a>
+    </section>
+
+    <section class="planSection">
+      <header class="planSection__heading primaryHeading">
+        <h2 class="primaryHeading__text">
+          料金プラン
+          <span class="primaryHeading__en" lang="en">Price</span>
+        </h2>
+      </header>
+
+      <div class="planSection__cards">
+        <section class="planSection__card planCard planCard--master">
+          <h3 class="planCard__heading">マスタープラン</h3>
+
+          <dl class="planCard__list">
+            <dt class="planCard__term">利用時間：</dt>
+            <dd class="planCard__desc">24時間</dd>
+            <dt class="planCard__term">月額料金：</dt>
+            <dd class="planCard__desc">35,000円（税別）</dd>
+          </dl>
+        </section>
+
+        <section class="planSection__card planCard planCard--day">
+          <h3 class="planCard__heading">平日デイタイム<br>プラン</h3>
+
+          <dl class="planCard__list">
+            <dt class="planCard__term">利用時間：</dt>
+            <dd class="planCard__desc">平日10:00〜18:00</dd>
+            <dt class="planCard__term">月額料金：</dt>
+            <dd class="planCard__desc">20,000円（税別）</dd>
+          </dl>
+        </section>
+
+        <section class="planSection__card planCard planCard--night">
+          <h3 class="planCard__heading">平日ナイトタイム<br>＆週末プラン</h3>
+
+          <dl class="planCard__list">
+            <dt class="planCard__term">利用時間：</dt>
+            <dd class="planCard__desc">平日18:00〜22:00、<br class="pcOnly">土日祝10:00〜18:00</dd>
+            <dt class="planCard__term">月額料金：</dt>
+            <dd class="planCard__desc">20,000円（税別）</dd>
+          </dl>
+        </section>
+
+        <section class="planSection__card planCard planCard--dropin">
+          <h3 class="planCard__heading">ドロップイン</h3>
+
+          <dl class="planCard__list">
+            <dt class="planCard__term">利用時間：</dt>
+            <dd class="planCard__desc">10:00〜18:00</dd>
+            <dt class="planCard__term">月額料金：</dt>
+            <dd class="planCard__desc">1時間500円、<br class="pcOnly">終日2,500円</dd>
+          </dl>
+        </section><!-- /.planCard -->
+      </div> <!-- /.priceSection__cards -->
+
+      <a class="planSection__btn primaryBtn" href="/plan/">料金プラン詳細はこちら</a>
+    </section>
+
+    <section class="accessSection">
+      <header class="accessSection__heading primaryHeading">
+        <h2 class="primaryHeading__text">
+          アクセス
+          <span class="primaryHeading__en" lang="en">Access</span>
+        </h2>
+      </header>
+
+      <p class="accessSection__text">
+        〒101-0051　東京都千代田区神田神保町1-105<br>
+        都営新宿線・三田線、東京メトロ 半蔵門線「神保町駅」A9出口より徒歩3分<br>
+        東京メトロ 東西線「竹橋駅」3b出口より徒歩6分
+      </p>
+
+      <div class="accessSection__mapWrapper">
+        <iframe class="accessSection__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2989288279264!2d139.75808755125937!3d35.69426083676658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1049646ffb%3A0x7abe3f67bddf1a86!2z44CSMTAxLTAwNTEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw56We5L-d55S677yR5LiB55uu77yR77yQ77yV!5e0!3m2!1sja!2sjp!4v1624922323587!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div><!-- /.accessSection__mapWrapper -->
+
+      <a class="accessSection__more primaryBtn" href="/access/">アクセス詳細はこちら</a>
+    </section>
+
+    <section class="contactSection">
+      <header class="contactSection__heading primaryHeading">
+        <h2 class="primaryHeading__text">
+          お問合せ
+          <span class="primaryHeading__en" lang="en">Contact</span>
+        </h2>
+      </header>
+
+      <div class="contactSection__content">
+        <div class="contactSection__tel">
+          <p class="contactSection__telNumber">
+            <a class="contactSection__telLink" href="tel:0300000000">03-0000-0000</a>
+          </p>
+
+          <p class="contactSection__telText">平日：10:00〜22:00／土日祝：10:00〜18:00</p>
+        </div><!-- /.contactSection__tel -->
+
+        <div class="contactSection__contact">
+          <a class="contactSection__btn primaryBtn primaryBtn--envelope" href="/contact/">お問合せフォーム</a>
+        </div><!-- /.contactSection__contact -->
+      </div><!-- /.contactSection__content -->
+    </section>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('components/common/_footer.ejs') %>
+
+<%- include('components/common/_script') %>
+
+</body>
+</html>
